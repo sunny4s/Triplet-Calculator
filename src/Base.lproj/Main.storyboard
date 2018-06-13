@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWB-0J-tDf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="zZE-Kk-X2h">
+            <objects>
+                <viewController id="oWB-0J-tDf" customClass="FirstViewController" customModule="TripletCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zoS-7T-hw6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="516-am-sa3" userLabel="status bar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="l8l-Cc-yjy"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hns-El-IGm">
+                                <rect key="frame" x="10" y="20.5" width="355" height="646.5"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uj2-26-5E5">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jfS-cz-gQk"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.99396210910000005" green="0.45714598890000002" blue="0.98659199480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="606-h4-EeO">
+                                        <rect key="frame" x="0.0" y="50" width="355" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-mz-ZTT">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="70"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="DPJ-xC-kuu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="woJ-FM-kfn">
+                                        <rect key="frame" x="0.0" y="130" width="355" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzv-7B-7Wc">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="UCz-Pl-3wS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleColor" red="0.65484553575515747" green="0.65493941307067871" blue="0.65481585264205933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPrev:" destination="oWB-0J-tDf" eventType="touchUpInside" id="VZc-vL-bKk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-NM-QAf">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="tTn-Bp-PN9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                                <state key="normal" title="&gt;">
+                                                    <color key="titleColor" red="0.65484553580000004" green="0.65493941310000003" blue="0.65481585259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonNext:" destination="oWB-0J-tDf" eventType="touchUpInside" id="eNY-IJ-6if"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kOW-pe-Qph">
+                                        <rect key="frame" x="0.0" y="190" width="355" height="71.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="636-J8-ae5">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.53301590679999999" green="0.9714623094" blue="0.50388258699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonClear:" destination="oWB-0J-tDf" eventType="touchUpInside" id="p2m-p8-mEL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfU-sq-gRm" userLabel="decimal">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonDecimalPoint:" destination="oWB-0J-tDf" eventType="touchUpInside" id="9bB-Ua-27n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjw-RG-U5B" userLabel="backspace">
+                                                <rect key="frame" x="182.5" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="backspace.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonDelete:" destination="oWB-0J-tDf" eventType="touchUpInside" id="JMZ-48-eTI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-X4-jeR" userLabel="multiply">
+                                                <rect key="frame" x="274" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.946042261" green="0.57045143970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="multiply.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonMultiply:" destination="oWB-0J-tDf" eventType="touchUpInside" id="oiZ-55-Ww0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="of1-k0-7X9"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-lh-0vO">
+                                        <rect key="frame" x="0.0" y="271.5" width="355" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmv-80-h7e">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonOne:" destination="oWB-0J-tDf" eventType="touchUpInside" id="0nD-i3-ipI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlJ-11-IIS">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTwo:" destination="oWB-0J-tDf" eventType="touchUpInside" id="MNW-G2-yWh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-nj-xtR">
+                                                <rect key="frame" x="182.5" y="0.0" width="81.5" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492609024048" green="0.97348743677139282" blue="0.51860815286636353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonThree:" destination="oWB-0J-tDf" eventType="touchUpInside" id="s6a-aP-vWt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-oo-qSi" userLabel="divide">
+                                                <rect key="frame" x="274" y="0.0" width="81" height="71"/>
+                                                <color key="backgroundColor" red="0.94604226100508126" green="0.57045143965658829" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="divide.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonDivide:" destination="oWB-0J-tDf" eventType="touchUpInside" id="NRd-Yc-zMS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hYQ-wt-1zz">
+                                        <rect key="frame" x="0.0" y="352.5" width="355" height="71.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-bb-ohL">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonFour:" destination="oWB-0J-tDf" eventType="touchUpInside" id="Dzn-Tx-8rs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaT-3l-UVg">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonFive:" destination="oWB-0J-tDf" eventType="touchUpInside" id="kzg-CL-u9N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-gJ-xJ2">
+                                                <rect key="frame" x="182.5" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonSix:" destination="oWB-0J-tDf" eventType="touchUpInside" id="BB6-8c-0PS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAD-7o-IiI" userLabel="subtract">
+                                                <rect key="frame" x="274" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.94604226100508126" green="0.57045143965658829" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="subtract.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonSubtract:" destination="oWB-0J-tDf" eventType="touchUpInside" id="C4p-uW-8V3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ae0-76-F4f">
+                                        <rect key="frame" x="0.0" y="434" width="355" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-3x-kNs">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonSeven:" destination="oWB-0J-tDf" eventType="touchUpInside" id="bu7-9J-56Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4s9-KR-vqy">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonEight:" destination="oWB-0J-tDf" eventType="touchUpInside" id="Pre-df-1sN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPQ-rZ-5vc">
+                                                <rect key="frame" x="182.5" y="0.0" width="81.5" height="71"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonNine:" destination="oWB-0J-tDf" eventType="touchUpInside" id="BrO-23-nsC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-kd-8T8" userLabel="add">
+                                                <rect key="frame" x="274" y="0.0" width="81" height="71"/>
+                                                <color key="backgroundColor" red="0.94604226100508126" green="0.57045143965658829" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="add.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonAdd:" destination="oWB-0J-tDf" eventType="touchUpInside" id="NEO-o6-dkw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="syq-Av-nS2">
+                                        <rect key="frame" x="0.0" y="515" width="355" height="71.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hE2-yV-9Bd">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonZero:" destination="oWB-0J-tDf" eventType="touchUpInside" id="fe1-Zi-aqO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ae-tt-WcR" userLabel="Button Double Zeros">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
+                                                <state key="normal" title="00">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonDoubleZero:" destination="oWB-0J-tDf" eventType="touchUpInside" id="rKh-iU-aX1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-2v-OFE" userLabel="Button Triple Zeros">
+                                                <rect key="frame" x="182.5" y="0.0" width="81.5" height="71.5"/>
+                                                <color key="backgroundColor" red="0.99937492610000001" green="0.97348743680000005" blue="0.51860815289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
+                                                <state key="normal" title="000">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTripleZero:" destination="oWB-0J-tDf" eventType="touchUpInside" id="fGA-nd-pIy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G0-gP-Kpb" userLabel="equal">
+                                                <rect key="frame" x="274" y="0.0" width="81" height="71.5"/>
+                                                <color key="backgroundColor" red="0.94604226100508126" green="0.57045143965658829" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <state key="normal" image="equal.png">
+                                                    <color key="titleColor" red="0.00024444406149999999" green="0.082852639259999999" blue="0.34942212700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="32.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonEqual:" destination="oWB-0J-tDf" eventType="touchUpInside" id="ftn-Tu-djk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-1Z-NKd">
+                                        <rect key="frame" x="0.0" y="596.5" width="355" height="50"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="syq-Av-nS2" firstAttribute="height" secondItem="kOW-pe-Qph" secondAttribute="height" id="195-kw-SQY"/>
+                                    <constraint firstItem="ae0-76-F4f" firstAttribute="height" secondItem="kOW-pe-Qph" secondAttribute="height" id="Cxx-c9-MlW"/>
+                                    <constraint firstItem="hYQ-wt-1zz" firstAttribute="height" secondItem="kOW-pe-Qph" secondAttribute="height" id="IWR-Ea-jCJ"/>
+                                    <constraint firstItem="DIg-lh-0vO" firstAttribute="height" secondItem="kOW-pe-Qph" secondAttribute="height" id="wb8-C2-xHj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058981366455554962" green="0.19490200281143188" blue="0.49071526527404785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="516-am-sa3" firstAttribute="width" secondItem="zoS-7T-hw6" secondAttribute="width" id="FDG-wD-oG7"/>
+                            <constraint firstAttribute="trailing" secondItem="Hns-El-IGm" secondAttribute="trailing" constant="10" id="Gkh-XF-A7G"/>
+                            <constraint firstItem="516-am-sa3" firstAttribute="leading" secondItem="zoS-7T-hw6" secondAttribute="leading" id="JTb-Up-PRR"/>
+                            <constraint firstItem="Hns-El-IGm" firstAttribute="leading" secondItem="zoS-7T-hw6" secondAttribute="leading" constant="10" id="M8A-W8-NHm"/>
+                            <constraint firstItem="Hns-El-IGm" firstAttribute="top" secondItem="zoS-7T-hw6" secondAttribute="top" constant="20" id="PIx-XH-bIa"/>
+                            <constraint firstAttribute="bottom" secondItem="Hns-El-IGm" secondAttribute="bottom" id="bpD-c7-50h"/>
+                            <constraint firstItem="516-am-sa3" firstAttribute="top" secondItem="zoS-7T-hw6" secondAttribute="top" id="oot-d5-9N0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4bU-7b-QNa"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7YZ-AI-QWF" appends="YES" id="9ef-vd-VnE"/>
+                            <outletCollection property="gestureRecognizers" destination="KON-UZ-9nh" appends="YES" id="BAn-mr-CS4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttonAdd" destination="GU0-kd-8T8" id="IkV-8D-GA5"/>
+                        <outlet property="buttonBackspace" destination="Kjw-RG-U5B" id="C30-Gk-HO2"/>
+                        <outlet property="buttonClear" destination="636-J8-ae5" id="Rrn-tS-yQF"/>
+                        <outlet property="buttonDecimalPoint" destination="JfU-sq-gRm" id="6O4-2m-mGo"/>
+                        <outlet property="buttonDivide" destination="eg6-oo-qSi" id="nhO-75-bfU"/>
+                        <outlet property="buttonDoubleZero" destination="6Ae-tt-WcR" id="d2h-kW-9qb"/>
+                        <outlet property="buttonDoubleZeros" destination="6Ae-tt-WcR" id="X2N-VL-BrB"/>
+                        <outlet property="buttonEight" destination="4s9-KR-vqy" id="u1M-42-Dxs"/>
+                        <outlet property="buttonEqual" destination="5G0-gP-Kpb" id="NdJ-Bm-VF3"/>
+                        <outlet property="buttonFive" destination="kaT-3l-UVg" id="d0g-QM-I0f"/>
+                        <outlet property="buttonFour" destination="bjW-bb-ohL" id="wZC-9C-lYO"/>
+                        <outlet property="buttonMultiply" destination="GY4-X4-jeR" id="70j-lJ-lcm"/>
+                        <outlet property="buttonNext" destination="fVc-NM-QAf" id="x41-09-EUg"/>
+                        <outlet property="buttonNine" destination="BPQ-rZ-5vc" id="hcb-BU-Umd"/>
+                        <outlet property="buttonOne" destination="Xmv-80-h7e" id="e6S-EP-mfP"/>
+                        <outlet property="buttonPrev" destination="gzv-7B-7Wc" id="98S-m9-ZeL"/>
+                        <outlet property="buttonSeven" destination="KaN-3x-kNs" id="6GZ-Xo-7Gi"/>
+                        <outlet property="buttonSix" destination="8b8-gJ-xJ2" id="aPP-RX-tp7"/>
+                        <outlet property="buttonSubtract" destination="kAD-7o-IiI" id="08V-HC-m3l"/>
+                        <outlet property="buttonThree" destination="wT1-nj-xtR" id="Y9U-3O-2n5"/>
+                        <outlet property="buttonTripleZero" destination="cyZ-2v-OFE" id="adc-h8-Hqt"/>
+                        <outlet property="buttonTwo" destination="dlJ-11-IIS" id="T8L-Bx-lF3"/>
+                        <outlet property="buttonZero" destination="hE2-yV-9Bd" id="C6k-7x-wqD"/>
+                        <outlet property="labelTotal" destination="Bek-mz-ZTT" id="VeF-9g-4fY"/>
+                        <outlet property="pageControl" destination="uj2-26-5E5" id="Z2V-dT-ejY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdV-05-t8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="7YZ-AI-QWF">
+                    <connections>
+                        <action selector="swipeLeftGesture:" destination="oWB-0J-tDf" id="Jni-h8-Hod"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="KON-UZ-9nh">
+                    <connections>
+                        <action selector="swipeRightGesture:" destination="oWB-0J-tDf" id="gTe-X2-gOo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-52" y="-210.04497751124438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add.png" width="240" height="240"/>
+        <image name="backspace.png" width="240" height="240"/>
+        <image name="divide.png" width="240" height="240"/>
+        <image name="equal.png" width="240" height="240"/>
+        <image name="multiply.png" width="240" height="240"/>
+        <image name="subtract.png" width="240" height="240"/>
+    </resources>
+</document>
